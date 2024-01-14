@@ -27,6 +27,6 @@ module.exports = app => {
 
     return {
         initialize: () => passport.initialize(),
-        authenticate: () => passport.authenticate(),
+        authenticate: () => passport.authenticate('jwt', { session: false}),
     }
 }
